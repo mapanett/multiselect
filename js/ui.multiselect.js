@@ -174,8 +174,8 @@ $.widget("ui.multiselect", {
 			this._setBusy(true);
 
 			// format data
-			if (data = this.options.dataParser(data)) {
-				var option, elements = [];
+			var elements = [];
+			if (data = this.options.dataParser.call(this, data)) {
 				for (var key in data) {
 					// check if the option does not exist already
 					if (this.element.find('option[value="'+key+'"]').size()==0) {
