@@ -217,7 +217,7 @@ $.widget("ui.multiselect", {
 			case 'sortable':
 				// readonly options
 				this._messages(
-					$.ui.multiselect.constante.MESSAGE_WARNING,
+					$.ui.multiselect.constants.MESSAGE_WARNING,
 					$.ui.multiselect.locale.errorReadonly, 
 					{option: key}
 				);
@@ -390,7 +390,7 @@ $.widget("ui.multiselect", {
 					setTimeout(function() { _addNode(); }, 1);
 				} else {
 					that._messages(
-						$.ui.multiselect.constante.MESSAGE_EXCEPTION,
+						$.ui.multiselect.constants.MESSAGE_EXCEPTION,
 						$.ui.multiselect.locale.errorInsertNode, 
 						{key:node.data('multiselect.optionLink').val(), value:node.text()}
 					);
@@ -748,7 +748,7 @@ $.widget("ui.multiselect", {
 							}
 						});
 					} catch (e) {
-						that._messages($.ui.multiselect.constante.MESSAGE_EXCEPTION, e.message);   // error message template ??
+						that._messages($.ui.multiselect.constants.MESSAGE_EXCEPTION, e.message);   // error message template ??
 						that._setBusy(false); 
 					}
 				} else {
@@ -841,7 +841,7 @@ var defaultDataParser = function(data) {
 			}
 		}
 	} else {
-		this._messages($.ui.multiselect.constante.MESSAGE_ERROR, $.ui.multiselect.locale.errorDataFormat);
+		this._messages($.ui.multiselect.constants.MESSAGE_ERROR, $.ui.multiselect.locale.errorDataFormat);
 		data = false;
 	}
 	return data;
